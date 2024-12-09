@@ -10,13 +10,13 @@ class House:
         self.name = name
         self.number_of_floors = number_of_floors
         self.new_floor = 1  # единица принята как первый этаж
-    # go_to(new_floor), где new_floor - номер этажа(int), на который нужно приехать.
-    # Метод go_to выводит на экран(в консоль) значения от 1 до new_floor(включительно).
+    # go_to(new_floor), где new_floor - номер этажа(int), на который нужно приехать.   
     def go_to(self, new_floor):
         # Если же new_floor больше чем self.number_of_floors или меньше 1, то вывести строку "Такого этажа не существует"
         if new_floor > self.number_of_floors or new_floor < 1:
             print("Такого этажа не существует")
         else:
+             # выводит на экран(в консоль) значения от 1 до new_floor(включительно)
             for floor in range(1, new_floor + 1):
                 print(floor)
             self.new_floor = new_floor
